@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 import FarmOfftake from "./molecules/farm-offtake";
 import FlashSales from "./molecules/flash-sale";
 import Hero from "./molecules/hero";
@@ -9,54 +10,9 @@ import { Metadata } from "next";
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-   title: "My Food Angels",
-   description:
-      "My Food Angels is a platform that connects food lovers with the best food vendors in Nigeria. We provide a platform for food vendors to showcase their products and services to a wider audience. We also provide a platform for food lovers to discover new and exciting food vendors in their area.",
-   generator: "Next.js",
-   applicationName: "MyFoodAngels",
-   referrer: "origin-when-cross-origin",
-   keywords: [
-      "My Food Angels",
-      "Food",
-      "Food Vendors",
-      "Food Lovers",
-      "Nigeria",
-      "Food Delivery",
-      "Food Services",
-      "Food Products",
-   ],
-   authors: [{ name: "MyFoodAngels" }],
-   creator: "MyFoodAngels",
-   publisher: "MyFoodAngels",
-   formatDetection: {
-      email: false,
-      address: false,
-      telephone: false,
-   },
-   alternates: {
-      canonical: "https://myfoodangels.com",
-      languages: {
-         "en-US": "/en-US",
-         "de-DE": "/de-DE",
-      },
-   },
-   openGraph: {
-      title: "My Food Angels | Connecting You with the Best Food Vendors",
-      description:
-         "Discover top food vendors in Nigeria and explore a wide variety of food products and services. My Food Angels brings you the best food experiences, delivered to your doorstep.",
-      url: "https://myfoodangels.com",
-      siteName: "MyFoodAngels",
-      images: [
-         {
-            url: "/images/og.jpg",
-            width: 1200,
-            height: 630,
-            alt: "MyFoodAngels Banner",
-         },
-      ],
-      locale: "en_US",
-      type: "website",
-   },
+   title: "Simis Blog",
+  
+   
    robots: {
       index: true,
       follow: true,
@@ -107,14 +63,15 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+   redirect("/blog");
    return (
       <main>
-         <Hero />
+         {/* <Hero />
          <FarmOfftake />
          <PopularProducts />
          <FlashSales />
          <Testimonials />
-         <Sdg />
+         <Sdg /> */}
       </main>
    );
 }

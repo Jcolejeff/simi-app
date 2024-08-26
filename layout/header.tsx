@@ -62,35 +62,7 @@ const Header = () => {
             </Show.When>
          </Show>
          <section className="w-full bg-white shadow">
-            <Show>
-               <Show.When isTrue={!data?.isDurationPast && data?.showAnnouncement}>
-                  <div className="w-full bg-gray-200 py-2">
-                     {width ? (
-                        <Marquee
-                           direction="ltr"
-                           scatterRandomly={false}
-                           onInit={() => {}}
-                           onFinish={() => {}}
-                           resetAfterTries={1}
-                           velocity={25}
-                        >
-                           <Text size={"xs"} weight={"medium"}>
-                              {data?.announcementText}
-                           </Text>
-                           <Text size={"xs"} weight={"medium"}>
-                              .
-                           </Text>
-                        </Marquee>
-                     ) : (
-                        <div className="my-1 flex items-center px-5">
-                           <Text size={"xs"} weight={"medium"}>
-                              {data?.announcementText}
-                           </Text>
-                        </div>
-                     )}
-                  </div>
-               </Show.When>
-            </Show>
+            
 
             <main className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-4 py-4 md:px-0">
                <Button
@@ -99,72 +71,19 @@ const Header = () => {
                   size={"none"}
                   onClick={handleVisibility}
                >
-                  <AlignJustify className="w-4" />
+                  <AlignJustify className="w-8 h-8" />
                </Button>
                <div className="hidden min-w-[24rem] items-center justify-between gap-8 md:flex">
                   <Link href={"/"}>
-                     <Image src={logo} alt="mfa-logo" className="h-8 w-12" />
+                     <Image src={logo} alt="mfa-logo" className="h-12 w-12" />
                   </Link>
                   <TopNav />
                </div>
-               <Link href={"/"} className="block h-10 w-12 md:hidden">
+               <Link href={"/"} className="block h-12 w-12 md:hidden">
                   <Image src={logo} alt="mfa-logo" className="h-full w-full" />
                </Link>
-               {width && width > 1040 && (
-                  <div className="flex items-center gap-4">
-                     <div className="flex items-center gap-2">
-                        <Link
-                           href={"/shop/wishlist"}
-                           className={cn("relative pr-2", loggedIn ? "block" : "hidden")}
-                        >
-                           <HeartIcon className="w-6" />
+              
 
-                           <span
-                              className="absolute right-0 rounded-full bg-primary px-2"
-                              style={{ top: "-5px" }}
-                           >
-                              <Text variant={"white"} size={"xs"} style={{ fontSize: "10px" }}>
-                                 {allWishListItems?.length}
-                              </Text>
-                           </span>
-                        </Link>
-                        <Separator orientation="vertical" />
-                        <div className="flex items-center justify-start gap-4">
-                           {/* <ShoppingCart /> */}
-                           <ShoppingCartDropdown />
-                           <span className="flex flex-col">
-                              <Text size={"xs"}>Shopping cart</Text>
-                              <Text weight={"bold"} size={"xs"}>
-                                 ₦{calculateTotalPrice(currentCart).toLocaleString() || 0}
-                              </Text>
-                           </span>
-                        </div>
-                     </div>
-
-                     {loggedIn ? (
-                        <ProfileIconDropdown />
-                     ) : (
-                        <div className="flex">
-                           <Link
-                              style={{ marginLeft: "50px" }}
-                              className="text-xs font-medium text-gray-600 hover:underline"
-                              href={"/account/signin"}
-                           >
-                              Login
-                           </Link>
-                           <Link
-                              style={{ marginLeft: "3px" }}
-                              className="text-xs font-medium text-gray-600 hover:underline"
-                              href={"/account/register"}
-                           >
-                              / Register
-                           </Link>
-                        </div>
-                     )}
-                  </div>
-               )}
-
-               {width && width <= 1040 && <ShoppingCart />}
             </main>
          </section>
       </div>

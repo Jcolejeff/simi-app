@@ -5,13 +5,13 @@ import Link from "next/link";
 import { Text } from "@/components/ui/text";
 
 const learnMore = [
-   { id: 1, title: "FAQs", href: "/faq" },
-   { id: 2, title: "Terms of Use", href: "/term-of-use" },
-   { id: 3, title: "Shipping Policy", href: "/shipping-policy" },
-   { id: 4, title: "Cookie Policy", href: "/cookie-policy" },
-   { id: 5, title: "Refund and Returns Policy", href: "/refund-and-returns-policy" },
-   { id: 6, title: "FB Policy", href: "/fb-policy" },
-   { id: 7, title: "Privacy Policy", href: "/privacy-policy" },
+   // { id: 1, title: "FAQs", href: "/faq" },
+   { id: 2, title: "Terms of Use", href: "/blogs" },
+   // { id: 3, title: "Shipping Policy", href: "/shipping-policy" },
+   // { id: 4, title: "Cookie Policy", href: "/cookie-policy" },
+   // { id: 5, title: "Refund and Returns Policy", href: "/refund-and-returns-policy" },
+   // { id: 6, title: "FB Policy", href: "/fb-policy" },
+   // { id: 7, title: "Privacy Policy", href: "/privacy-policy" },
 ];
 
 function LearnMore() {

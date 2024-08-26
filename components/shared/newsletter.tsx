@@ -21,7 +21,7 @@ function Newsletter({ mode }: { mode?: 'light' | 'dark' }) {
             size={'sm'}
             weight={'normal'}
           >
-            Join our community of food enthusiasts. Sign up today and let's embark on this flavorful adventure together!
+            Join our community of tech enthusiasts. Sign up today and let's embark on this flavorful adventure together!
           </Text>
         </div>
         <NewsletterForm mode={mode} />

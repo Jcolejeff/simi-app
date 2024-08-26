@@ -22,8 +22,8 @@ const WithRouteDisplay = ({
    const { width } = useWindowDimensions();
 
    return (
-      <div className="pt-4 md:pt-[70px]">
-         {isWidthGreaterOrEqualTo768(width) && <RouteDisplay route={route} />}
+      <div className="pt-20 md:pt-[70px]">
+         <RouteDisplay route={route} />
          <Container backgroundColor="bg-gray-100">
             <section
                style={{ maxWidth: containerMaxWidth || "1200px" }}

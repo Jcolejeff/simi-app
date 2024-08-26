@@ -8,18 +8,18 @@ function RouteDisplay({ route, routes }: { route: string; routes?: string[] }) {
    return (
       <div
          style={{
-            backgroundImage: `url(/images/shop/route-display-bg.png)`,
+            backgroundImage: `url(/images/shop/route-display-bg.jpg)`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
          }}
-         className="hidden w-full items-center justify-between bg-black p-8 md:flex"
+         className=" w-full items-center justify-between bg-black p-8 flex"
       >
          <div className="mx-auto flex w-full max-w-[1200px] items-center justify-start gap-2">
             <ShoppingBag className="w-6 text-white" />
             {!routes ? (
                <>
                   <ChevronRight className="w-6 text-white" />
-                  <Text className="text-primary-2" weight={"medium"} size={"sm"}>
+                  <Text className="text-primary-2" weight={"bold"} size={"default"}>
                      {route}
                   </Text>
                </>
@@ -30,7 +30,7 @@ function RouteDisplay({ route, routes }: { route: string; routes?: string[] }) {
                      render={(route: any, index: number) => (
                         <React.Fragment key={index}>
                            <ChevronRight className="w-6 text-white" />
-                           <Text className="text-primary-2" weight={"medium"} size={"sm"}>
+                           <Text className="text-primary-2" weight={"bold"} size={"default"}>
                               {route}
                            </Text>
                         </React.Fragment>

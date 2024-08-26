@@ -32,7 +32,7 @@ const useBlogs = () => {
       return blogs;
    };
 
-   const { data, isSuccess, isError, error } = useQuery({
+   const { data, isSuccess, isError, error ,isLoading } = useQuery({
       queryKey: ["get-blogs"],
       queryFn: fetchBlogs,
    });
@@ -43,7 +43,7 @@ const useBlogs = () => {
       }
    }, [isError, error]);
 
-   return { data, isSuccess, isError, error };
+   return { data, isSuccess, isError, error ,isLoading};
 };
 
 export default useBlogs;

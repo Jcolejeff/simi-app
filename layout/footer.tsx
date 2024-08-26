@@ -22,14 +22,13 @@ function Footer() {
         className="mx-auto w-full pt-4"
       >
         <div className="mb-4 grid w-full grid-cols-1 gap-8 px-4 pt-4 md:grid-cols-3">
-          <ContactDetails />
+          {/* <ContactDetails /> */}
           <QuickLinks />
           <LearnMore />
         </div>
         {width && width <= 768 && <Newsletter mode={'dark'} />}
         <Separator style={{ color: '#989898' }} />
-        <Copyright />
-        {width && width <= 768 && <BottomNav />}
+        
       </main>
     </Container>
   );

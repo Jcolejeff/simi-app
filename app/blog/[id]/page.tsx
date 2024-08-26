@@ -72,80 +72,14 @@ export async function generateMetadata(
    const previousImages = (await parent).openGraph?.images || [];
 
    return {
-      title: `${capitalizeFirstLetter(blog.title)} | MyFoodAngels Blog`,
-      description: blog.contents.slice(0, 160) || `Read about ${blog.title} on MyFoodAngels blog.`,
+      title: `${capitalizeFirstLetter(blog.title)} | Simi's Blog`,
+      description: blog.contents.slice(0, 160) || `Read about ${blog.title} on Simi's blog.`,
       generator: "Next.js",
-      applicationName: "MyFoodAngels",
+      applicationName: "Simi's Blog",
       referrer: "origin-when-cross-origin",
-      keywords: ["Blog", "MyFoodAngels", "Online Blog", blog.title, blog.category].filter(
-         (keyword): keyword is string => typeof keyword === "string",
-      ),
-      authors: [{ name: blog.postedBy || "MyFoodAngels" }],
-      creator: "MyFoodAngels",
-      publisher: "MyFoodAngels",
-      alternates: {
-         canonical: `https://myfoodangels.com/blog/${slug}`,
-         languages: {
-            "en-US": "/en-US",
-            "de-DE": "/de-DE",
-         },
-      },
-      formatDetection: {
-         email: false,
-         address: false,
-         telephone: false,
-      },
-      openGraph: {
-         title: `${capitalizeFirstLetter(blog.title)} | MyFoodAngels Blog`,
-         description:
-            blog.contents.slice(0, 160) || `Read about ${blog.title} on MyFoodAngels blog.`,
-         type: "website",
-         url: `https://myfoodangels.com/blog/${slug}`,
-         siteName: "MyFoodAngels",
-         images: [
-            {
-               url: (blog.image as string) || "/default-blog-image.jpg",
-               width: 800,
-               height: 600,
-               alt: blog.title,
-            },
-            ...previousImages,
-         ],
-         locale: "en_US",
-      },
-      robots: {
-         index: true,
-         follow: true,
-         nocache: false,
-         googleBot: {
-            index: true,
-            follow: true,
-            noimageindex: false,
-            "max-video-preview": -1,
-            "max-image-preview": "large",
-            "max-snippet": -1,
-         },
-      },
-      icons: {
-         icon: "/fav.svg",
-         shortcut: "/fav.svg",
-         apple: "/fav.svg",
-         other: {
-            rel: "apple-touch-icon-precomposed",
-            url: "/fav.svg",
-         },
-      },
-      twitter: {
-         card: "summary_large_image",
-         title: `${capitalizeFirstLetter(blog.title)} | MyFoodAngels Blog`,
-         description:
-            blog.contents.slice(0, 160) || `Read about ${blog.title} on MyFoodAngels blog.`,
-         siteId: "1467726470533754880",
-         creator: "@MyFoodAngels",
-         creatorId: "1467726470533754880",
-         images: [(blog.image as string) || "/default-blog-image.jpg"],
-      },
-   };
+      
+     
+   }
 }
 
 async function Page({ params: { id } }: params) {
