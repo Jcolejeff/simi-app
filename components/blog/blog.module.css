@@ -1,0 +1,27 @@
+.blogSidebar {
+   flex: 0 0 auto;
+   white-space: wrap;
+   overflow: auto;
+}
+
+.blogSection {
+   flex: 1 1 auto;
+   overflow: auto;
+}
+
+.blogPageContent p {
+   font-size: 18px;
+   color: #808080;
+   margin-bottom: 8px;
+}
+
+.blogPageContent h2 {
+   font-size: 24px;
+   font-weight: 600;
+   margin: 24px 0;
+}
+
+.blogPageContent a {
+   text-decoration: underline;
+   cursor: pointer;
+}

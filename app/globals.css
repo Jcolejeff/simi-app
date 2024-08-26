@@ -1,0 +1,301 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "instantsearch.css/themes/algolia.css";
+body {
+   background: #ffffff;
+}
+
+@layer base {
+   :root {
+      --background: 0 0% 100%;
+      --foreground: 0 0% 3.9%;
+      --card: 0 0% 100%;
+      --card-foreground: 0 0% 3.9%;
+      --popover: 0 0% 100%;
+      --popover-foreground: 0 0% 3.9%;
+      --popover-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.2);
+      --popover-border: rgba(124, 124, 124, 0.44);
+      --primary: #7ab42c;
+      --primary-foreground: #7ab42c;
+      --secondary: 0 0% 96.1%;
+      --secondary-foreground: 0 0% 9%;
+      --muted: 0 0% 96.1%;
+      --muted-foreground: 0 0% 45.1%;
+      --accent: 0 0% 96.1%;
+      --accent-foreground: 0 0% 9%;
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 0 0% 98%;
+      --border: 0 0% 89.8%;
+      --input: 0 0% 89.8%;
+      --ring: 0 0% 3.9%;
+
+      --text-link: var(--primary);
+
+      --text: #1b1f28;
+      --text-dim: #32475c61;
+      --text-light: #ccc;
+      --text-link: var(--primary);
+   }
+}
+@layer utilities {
+   .no-scrollbar {
+      scrollbar-width: 0 !important;
+   }
+
+   .no-scrollbar::-webkit-scrollbar {
+      display: none !important;
+   }
+   .scrollbar::-webkit-scrollbar {
+      display: block !important;
+   }
+
+   .no-scrollbar div {
+      scrollbar-width: 0 !important;
+   }
+
+   .no-scrollbar div::-webkit-scrollbar {
+      display: none !important;
+   }
+   .scrollbar div {
+      scrollbar-width: 4px !important;
+   }
+
+   .scrollbar div::-webkit-scrollbar {
+      display: block !important;
+   }
+   *::-webkit-scrollbar,
+   html::-webkit-scrollbar,
+   .main-wrapper::-webkit-scrollbar,
+   body::-webkit-scrollbar {
+      height: 0px;
+      margin-inlne: 4px;
+
+      width: 5px;
+   }
+   *::-webkit-scrollbar-thumb,
+   .scrollbar::-webkit-scrollbar-thumb,
+   html::-webkit-scrollbar-thumb,
+   body::-webkit-scrollbar-thumb {
+      background: linear-gradient(135deg, #00ae50 0%, #00ae50 100%);
+      border-radius: 3px;
+   }
+   *::-webkit-scrollbar-track,
+   html::-webkit-scrollbar-track,
+   .main-wrapper::-webkit-scrollbar-track,
+   body::-webkit-scrollbar-track {
+      background-color: transparent;
+
+      width: 0px;
+   }
+}
+
+.hideScroll::-webkit-scrollbar {
+   display: none;
+}
+/* .ais-SearchBox-input {
+   width: 100%;
+   padding: 10px;
+   font-size: 16px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+} */
+
+.ais-Hits-item {
+   border-bottom: 1px solid #eee;
+   padding: 10px;
+   font-size: 16px;
+}
+
+.ais-Hits-item:nth-child(even) {
+   background-color: #f9f9f9;
+}
+
+.ais-Hits-item:hover {
+   background-color: #f1f1f1;
+}
+.ais-SearchBox {
+   height: 40px !important;
+}
+
+.showScroll::-webkit-scrollbar {
+   display: block;
+}
+.buttonStyle {
+   position: relative;
+   cursor: pointer;
+   user-select: none;
+   text-align: center;
+   text-decoration: none;
+   transition-duration: 0.4s;
+   -webkit-transition-duration: 0.4s;
+   /* Safari */
+}
+
+.buttonStyle:after {
+   content: "";
+   display: block;
+   position: absolute;
+   border-radius: 4em;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   opacity: 0;
+   transition: all 0.5s;
+   box-shadow: 0 0 10px 40px white;
+}
+
+.buttonStyle:active:after {
+   box-shadow: 0 0 0 0 white;
+   position: absolute;
+   border-radius: 4em;
+   left: 0;
+   top: 0;
+   opacity: 1;
+   transition: 0s;
+}
+
+.buttonStyle:active {
+   top: 1px;
+}
+.post-content h1 {
+   @apply text-3xl;
+   @apply font-medium;
+}
+.post-content h2 {
+   @apply text-2xl;
+   @apply font-medium;
+}
+.post-content h3 {
+   @apply text-lg;
+   @apply font-medium;
+}
+.post-content h4 {
+   @apply text-base;
+   @apply font-medium;
+}
+.post-content h5 {
+   @apply text-base;
+   @apply font-medium;
+}
+.post-content h6 {
+   @apply text-sm;
+   @apply font-medium;
+}
+.post-content p {
+   @apply text-base;
+}
+.post-content a {
+   @apply text-primary-4;
+   @apply transition-colors hover:text-primary-4/50;
+   @apply duration-200;
+   @apply ease-in-out;
+   @apply underline;
+}
+.post-content img {
+   @apply w-full;
+}
+.post-content span {
+   @apply text-base;
+}
+.post-content blockquote {
+   @apply bg-gray-100;
+   @apply py-6;
+   @apply px-8;
+   @apply border-l-4;
+   @apply border-gray-800;
+   @apply rounded-md;
+   @apply shadow-md;
+}
+.post-content blockquote p {
+   @apply text-gray-700;
+}
+.post-content pre {
+   @apply bg-gray-800;
+}
+.post-content pre code {
+   @apply text-white;
+}
+.post-content code {
+   @apply bg-gray-200;
+}
+.post-content ul {
+   @apply list-disc;
+}
+.post-content ol {
+   @apply list-decimal;
+}
+.post-content li {
+   @apply text-base;
+   @apply ml-4;
+   @apply mb-8;
+}
+
+.post-content table {
+   @apply w-full;
+}
+.post-content table th {
+   @apply bg-gray-200;
+}
+.post-content table td {
+   @apply bg-gray-100;
+}
+.post-content table th,
+.post-content table td {
+   @apply text-base;
+}
+.post-content hr {
+   @apply border-t-2;
+}
+.post-content .gatsby-highlight {
+   @apply bg-gray-800;
+}
+.post-content .gatsby-highlight pre {
+   @apply bg-gray-800;
+}
+.post-content .gatsby-highlight pre code {
+   @apply text-white;
+}
+.post-content .gatsby-highlight code {
+   @apply bg-gray-800;
+}
+.post-content .gatsby-highlight pre code {
+   @apply text-white;
+}
+.post-content .gatsby-highlight pre code span {
+   @apply text-white;
+}
+.post-content .gatsby-highlight pre code span.kwd {
+   @apply text-blue-500;
+}
+.post-content .gatsby-highlight pre code span.pun {
+   @apply text-gray-400;
+}
+.post-content .gatsby-highlight pre code span.tag {
+   @apply text-yellow-500;
+}
+.post-content .gatsby-highlight pre code span.typ {
+   @apply text-green-500;
+}
+#ez-toc-container {
+   display: none !important;
+   visibility: hidden !important;
+   height: 0 !important;
+   overflow: hidden !important;
+   width: 0 !important;
+}
+.ez-toc-v2_0_63
+   .counter-hierarchy
+   .ez-toc-counter
+   .ez-toc-grey
+   .ez-toc-container-direction
+   .ez-toc-title-container
+   .ez-toc-list
+   .ez-toc-list-level-1 {
+   display: none !important;
+   visibility: hidden !important;
+   height: 0 !important;
+   overflow: hidden !important;
+   width: 0 !important;
+}

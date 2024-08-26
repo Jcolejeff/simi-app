@@ -1,0 +1,17 @@
+.category {
+  position: relative;
+  columns: 4;
+  column-gap: 10px;
+}
+
+.category div {
+  background-size: cover; /* Ensure the background image covers the entire div */
+  background-position: center; /* Center the background image within the div */
+  break-inside: avoid;
+  object-position: center;
+  object-fit: cover;
+  break-inside: avoid;
+  margin-bottom: 10px;
+  position: relative;
+  /* padding-bottom: 100%; Maintain a square aspect ratio (1:1) */
+}

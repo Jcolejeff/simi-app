@@ -1,0 +1,126 @@
+export const ORDERHISTORY = [
+   {
+      orderId: "ORD123456",
+      datePurchased: "2024-04-01",
+      total: 59.99,
+      quantityPurchased: 2,
+      transactionStatus: "completed",
+   },
+   {
+      orderId: "ORD123457",
+      datePurchased: "2024-04-03",
+      total: 120.0,
+      quantityPurchased: 1,
+      transactionStatus: "processing",
+   },
+   {
+      orderId: "ORD123458",
+      datePurchased: "2024-04-07",
+      total: 35.5,
+      quantityPurchased: 4,
+      transactionStatus: "on the way",
+   },
+   {
+      orderId: "ORD123459",
+      datePurchased: "2024-04-10",
+      total: 89.95,
+      quantityPurchased: 3,
+      transactionStatus: "completed",
+   },
+   {
+      orderId: "ORD123460",
+      datePurchased: "2024-04-15",
+      total: 150.75,
+      quantityPurchased: 5,
+      transactionStatus: "processing",
+   },
+   {
+      orderId: "ORD123461",
+      datePurchased: "2024-04-20",
+      total: 45.99,
+      quantityPurchased: 1,
+      transactionStatus: "on the way",
+   },
+   {
+      orderId: "ORD123462",
+      datePurchased: "2024-04-25",
+      total: 60.0,
+      quantityPurchased: 2,
+      transactionStatus: "completed",
+   },
+   {
+      orderId: "ORD123463",
+      datePurchased: "2024-04-30",
+      total: 70.45,
+      quantityPurchased: 3,
+      transactionStatus: "processing",
+   },
+   {
+      orderId: "ORD123464",
+      datePurchased: "2024-05-02",
+      total: 55.99,
+      quantityPurchased: 2,
+      transactionStatus: "on the way",
+   },
+   {
+      orderId: "ORD123465",
+      datePurchased: "2024-05-06",
+      total: 99.99,
+      quantityPurchased: 4,
+      transactionStatus: "completed",
+   },
+   {
+      orderId: "ORD123466",
+      datePurchased: "2024-05-09",
+      total: 130.75,
+      quantityPurchased: 3,
+      transactionStatus: "processing",
+   },
+   {
+      orderId: "ORD123467",
+      datePurchased: "2024-05-12",
+      total: 75.25,
+      quantityPurchased: 2,
+      transactionStatus: "on the way",
+   },
+   {
+      orderId: "ORD123468",
+      datePurchased: "2024-05-15",
+      total: 90.0,
+      quantityPurchased: 1,
+      transactionStatus: "completed",
+   },
+   {
+      orderId: "ORD123469",
+      datePurchased: "2024-05-18",
+      total: 110.5,
+      quantityPurchased: 4,
+      transactionStatus: "processing",
+   },
+   {
+      orderId: "ORD123470",
+      datePurchased: "2024-05-20",
+      total: 150.25,
+      quantityPurchased: 5,
+      transactionStatus: "on the way",
+   },
+];
+
+export const TableHeadings = ["Order ID", "Date", "Total", "Status", ""];
+
+export const AddressData = [
+   {
+      type: "Billing Address",
+      name: "Chioma Azuka",
+      address: "10, Allen Avenue, Ikeja Lagos State, Nigeria",
+      email: "ChiomaAzuka@gmail.com",
+      phone: "(+234) 805-347 6829",
+   },
+   {
+      type: "Shipping Address",
+      name: "Chioma Azuka",
+      address: "10, Allen Avenue, Ikeja Lagos State, Nigeria",
+      email: "ChiomaAzuka@gmail.com",
+      phone: "(+234) 805-347 6829",
+   },
+];
