@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 import { Routes } from "@/routes";
 
-import logo from "../../images/logo.png";
+import logo from "../../public/images/home/logo.png";
 
 import MobileLinkItem from "./mobile-link-item";
 
@@ -34,9 +34,9 @@ export function MobileNav({ handleVisibility }: { handleVisibility: any }) {
                )}
             />
          </div>
-         <div className="flex w-full flex-1 items-center justify-center">
-            <Image src={logo} alt="mfa_logo" />
-         </div>
+         {/* <div className="flex w-full w-16 h-16 flex-1 items-center justify-center">
+            <Image src={logo} alt="mfa_logo"  className="w-full h-full"/>
+         </div> */}
       </div>
    );
 }
