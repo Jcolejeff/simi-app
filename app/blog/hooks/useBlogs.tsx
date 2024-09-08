@@ -22,7 +22,7 @@ const useBlogs = () => {
             dateAdded: createdDate,
             title: doc.data().title,
             image: doc.data().image,
-            category: doc.data().category || "Food",
+            category: doc.data().category || "General",
             postedBy: doc.data().postedBy || "Admin",
             contents: doc.data().data,
             slug: doc.data().slug,
@@ -32,7 +32,7 @@ const useBlogs = () => {
       return blogs;
    };
 
-   const { data, isSuccess, isError, error ,isLoading } = useQuery({
+   const { data, isSuccess, isError, error, isLoading } = useQuery({
       queryKey: ["get-blogs"],
       queryFn: fetchBlogs,
    });
@@ -43,7 +43,7 @@ const useBlogs = () => {
       }
    }, [isError, error]);
 
-   return { data, isSuccess, isError, error ,isLoading};
+   return { data, isSuccess, isError, error, isLoading };
 };
 
 export default useBlogs;

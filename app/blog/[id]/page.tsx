@@ -77,9 +77,7 @@ export async function generateMetadata(
       generator: "Next.js",
       applicationName: "Simi's Blog",
       referrer: "origin-when-cross-origin",
-      
-     
-   }
+   };
 }
 
 async function Page({ params: { id } }: params) {
@@ -149,15 +147,6 @@ async function Page({ params: { id } }: params) {
                   {/* <LeaveAComment /> */}
                   {/* <BlogComments /> */}
                </div>
-               {/* <aside
-            className={cn(
-              styles.blogSidebar,
-              " hideScroll  md:w-[20%] md:min-w-[280px] lg:w-[20%] lg:min-w-[320px] ",
-            )}
-          >
-            <TopCategories />
-            <RecentlyAddedBlogs isHidden />
-          </aside> */}
             </div>
          </WithRouteDisplay>
       </div>
